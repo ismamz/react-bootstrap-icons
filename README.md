@@ -8,6 +8,12 @@ The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use 
 npm install react-bootstrap-icons --save
 ```
 
+or
+
+```bash
+yarn add react-bootstrap-icons
+```
+
 ## Usage
 
 ```jsx
@@ -22,14 +28,20 @@ export default function App() {
 Icons can be configured with inline props:
 
 ```jsx
-<Camera color="royalblue" size={96} />
+<ArrowRight color="royalblue" size={96} />
+```
+
+You can pass wathever props you want:
+
+```jsx
+<ArrowRight className="ml-4" />
 ```
 
 You can also include the whole icon pack:
 
 ```jsx
 import React from 'react';
-import * as Icon from 'react-feather';
+import * as Icon from 'react-bootstrap-icons';
 
 export default function App() => {
   return <Icon.ArrowRight />
