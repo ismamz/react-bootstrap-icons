@@ -1,0 +1,50 @@
+{
+  "name": "react-bootstrap-icons",
+  "version": "v1.0.0-alpha",
+  "description": "React component for Bootstrap Icons",
+  "main": "build/index.js",
+  "module": "dist/index.js",
+  "repository": "https://github.com/ismamz/react-bootstrap-icons",
+  "author": "Ismael Martínez",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "rm -rf src/icons && node bin/build.js",
+    "build:bundle": "rm -rf build && rollup --config rollup.config.js",
+    "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
+    "build": "concurrently \"npm:build:*\""
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "bootstrap"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^4.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "feather-icons": "^4.22.1",
+    "prettier-eslint": "^9.0.0",
+    "rollup": "^1.16.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "uppercamelcase": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.0.0-alpha",
+    "prop-types": "^15.7.2"
+  }
+}

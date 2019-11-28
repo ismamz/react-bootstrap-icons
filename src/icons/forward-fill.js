@@ -1,0 +1,31 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const ForwardFill = (props) => {
+  const { color, size, ...rest } = props;
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width={size}
+      height={size}
+      fill={color}
+      {...rest}
+    >
+      <path d="M11.77 14.11l4.012-2.953a.647.647 0 000-1.114L11.771 7.09a.644.644 0 00-.971.557V8.65H4v3.9h6.8v1.003c0 .505.545.808.97.557z" />
+    </svg>
+  );
+};
+
+ForwardFill.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
+
+ForwardFill.defaultProps = {
+  color: 'currentColor',
+  size: '1em',
+};
+
+export default ForwardFill;
