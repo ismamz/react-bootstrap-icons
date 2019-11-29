@@ -1,4 +1,4 @@
-# React Bootstrap Icons (alpha)
+# React Bootstrap Icons
 
 The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use as React components.
 
