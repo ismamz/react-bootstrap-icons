@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-icons",
-  "version": "1.0.1-alpha",
+  "version": "1.0.0-alpha2",
   "description": "React component for Bootstrap Icons",
   "main": "build/index.js",
   "module": "dist/index.js",
@@ -43,7 +43,7 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.0.0-alpha",
+    "bootstrap-icons": "^1.0.0-alpha2",
     "prop-types": "^15.7.2"
   }
 }
