@@ -13,7 +13,7 @@ const CircleFill = (props) => {
       fill={color}
       {...rest}
     >
-      <circle cx="10" cy="10" r="8" />
+      <circle cx="8" cy="8" r="8" />
     </svg>
   );
 };

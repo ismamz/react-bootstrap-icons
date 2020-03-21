@@ -15,7 +15,7 @@ const BookmarkFill = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M5 5a2 2 0 012-2h6a2 2 0 012 2v12l-5-3-5 3V5z"
+        d="M3 3a2 2 0 012-2h6a2 2 0 012 2v12l-5-3-5 3V3z"
         clipRule="evenodd"
       />
     </svg>

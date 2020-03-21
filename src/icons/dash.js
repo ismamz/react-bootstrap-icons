@@ -15,7 +15,7 @@ const Dash = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z"
+        d="M3.5 8a.5.5 0 01.5-.5h8a.5.5 0 010 1H4a.5.5 0 01-.5-.5z"
         clipRule="evenodd"
       />
     </svg>

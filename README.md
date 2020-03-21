@@ -2,6 +2,8 @@
 
 The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use as React components.
 
+<img src="https://api.framer.com/store/assets/ismael/bootstrap-icons/artwork.png?ODhmNDI">
+
 ## Installation
 
 ```bash

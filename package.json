@@ -43,7 +43,7 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.0.0-alpha2",
+    "bootstrap-icons": "^1.0.0-alpha3",
     "prop-types": "^15.7.2"
   }
 }

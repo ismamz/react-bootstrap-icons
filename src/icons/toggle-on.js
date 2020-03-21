@@ -15,7 +15,7 @@ const ToggleOn = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M7 5a5 5 0 000 10h6a5 5 0 000-10H7zm6 9a4 4 0 100-8 4 4 0 000 8z"
+        d="M5 3a5 5 0 000 10h6a5 5 0 000-10H5zm6 9a4 4 0 100-8 4 4 0 000 8z"
         clipRule="evenodd"
       />
     </svg>

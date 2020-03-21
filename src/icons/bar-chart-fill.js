@@ -13,9 +13,9 @@ const BarChartFill = (props) => {
       fill={color}
       {...rest}
     >
-      <rect width="4" height="5" x="3" y="12" rx="1" />
-      <rect width="4" height="9" x="8" y="8" rx="1" />
-      <rect width="4" height="14" x="13" y="3" rx="1" />
+      <rect width="4" height="5" x="1" y="10" rx="1" />
+      <rect width="4" height="9" x="6" y="6" rx="1" />
+      <rect width="4" height="14" x="11" y="1" rx="1" />
     </svg>
   );
 };

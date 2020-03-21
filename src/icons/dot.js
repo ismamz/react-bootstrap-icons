@@ -15,7 +15,7 @@ const Dot = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M10 11.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+        d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
         clipRule="evenodd"
       />
     </svg>

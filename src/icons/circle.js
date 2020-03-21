@@ -15,7 +15,7 @@ const Circle = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M10 17a7 7 0 100-14 7 7 0 000 14zm0 1a8 8 0 100-16 8 8 0 000 16z"
+        d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z"
         clipRule="evenodd"
       />
     </svg>

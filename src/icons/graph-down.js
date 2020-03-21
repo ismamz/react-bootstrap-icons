@@ -13,15 +13,15 @@ const GraphDown = (props) => {
       fill={color}
       {...rest}
     >
-      <path d="M2 2h1v16H2V2zm1 15h15v1H3v-1z" />
+      <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z" />
       <path
         fillRule="evenodd"
-        d="M16.39 11.041l-4.349-5.436L9 8.646 5.354 5l-.708.707L9 10.061l2.959-2.959 3.65 4.564.781-.625z"
+        d="M14.39 9.041l-4.349-5.436L7 6.646 3.354 3l-.708.707L7 8.061l2.959-2.959 3.65 4.564.781-.625z"
         clipRule="evenodd"
       />
       <path
         fillRule="evenodd"
-        d="M12 11.854a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-4a.5.5 0 00-1 0v3.5h-3.5a.5.5 0 00-.5.5z"
+        d="M10 9.854a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-4a.5.5 0 00-1 0v3.5h-3.5a.5.5 0 00-.5.5z"
         clipRule="evenodd"
       />
     </svg>

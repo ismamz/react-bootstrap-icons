@@ -13,7 +13,7 @@ const SquareFill = (props) => {
       fill={color}
       {...rest}
     >
-      <rect width="16" height="16" x="2" y="2" rx="2" />
+      <rect width="16" height="16" rx="2" />
     </svg>
   );
 };

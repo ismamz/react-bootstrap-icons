@@ -15,12 +15,12 @@ const ArrowDownLeft = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M5 9.5a.5.5 0 01.5.5v4.5H10a.5.5 0 010 1H5a.5.5 0 01-.5-.5v-5a.5.5 0 01.5-.5z"
+        d="M3 7.5a.5.5 0 01.5.5v4.5H8a.5.5 0 010 1H3a.5.5 0 01-.5-.5V8a.5.5 0 01.5-.5z"
         clipRule="evenodd"
       />
       <path
         fillRule="evenodd"
-        d="M14.354 5.646a.5.5 0 010 .708l-9 9a.5.5 0 01-.708-.708l9-9a.5.5 0 01.708 0z"
+        d="M12.354 3.646a.5.5 0 010 .708l-9 9a.5.5 0 01-.708-.708l9-9a.5.5 0 01.708 0z"
         clipRule="evenodd"
       />
     </svg>

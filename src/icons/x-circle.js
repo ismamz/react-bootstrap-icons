@@ -15,17 +15,17 @@ const XCircle = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M10 17a7 7 0 100-14 7 7 0 000 14zm0 1a8 8 0 100-16 8 8 0 000 16z"
+        d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z"
         clipRule="evenodd"
       />
       <path
         fillRule="evenodd"
-        d="M12.646 13.354l-6-6 .708-.708 6 6-.708.708z"
+        d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
         clipRule="evenodd"
       />
       <path
         fillRule="evenodd"
-        d="M7.354 13.354l6-6-.708-.708-6 6 .708.708z"
+        d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
         clipRule="evenodd"
       />
     </svg>

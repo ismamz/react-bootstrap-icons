@@ -15,10 +15,10 @@ const Battery = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M14 7H4a1 1 0 00-1 1v4a1 1 0 001 1h10a1 1 0 001-1V8a1 1 0 00-1-1zM4 6a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2V8a2 2 0 00-2-2H4z"
+        d="M12 5H2a1 1 0 00-1 1v4a1 1 0 001 1h10a1 1 0 001-1V6a1 1 0 00-1-1zM2 4a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2H2z"
         clipRule="evenodd"
       />
-      <path d="M16.5 11.5a1.5 1.5 0 000-3v3z" />
+      <path d="M14.5 9.5a1.5 1.5 0 000-3v3z" />
     </svg>
   );
 };

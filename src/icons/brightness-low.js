@@ -15,22 +15,22 @@ const BrightnessLow = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M10 13a3 3 0 100-6 3 3 0 000 6zm0 1a4 4 0 100-8 4 4 0 000 8z"
+        d="M8 11a3 3 0 100-6 3 3 0 000 6zm0 1a4 4 0 100-8 4 4 0 000 8z"
         clipRule="evenodd"
       />
-      <circle cx="10" cy="4.5" r=".5" />
-      <circle cx="10" cy="15.5" r=".5" />
-      <circle cx="15.5" cy="10" r=".5" transform="rotate(90 15.5 10)" />
-      <circle cx="4.5" cy="10" r=".5" transform="rotate(90 4.5 10)" />
-      <circle cx="13.889" cy="6.111" r=".5" transform="rotate(45 13.89 6.11)" />
-      <circle cx="6.111" cy="13.889" r=".5" transform="rotate(45 6.11 13.89)" />
+      <circle cx="8" cy="2.5" r=".5" />
+      <circle cx="8" cy="13.5" r=".5" />
+      <circle cx="13.5" cy="8" r=".5" transform="rotate(90 13.5 8)" />
+      <circle cx="2.5" cy="8" r=".5" transform="rotate(90 2.5 8)" />
+      <circle cx="11.889" cy="4.111" r=".5" transform="rotate(45 11.89 4.11)" />
+      <circle cx="4.111" cy="11.889" r=".5" transform="rotate(45 4.11 11.89)" />
       <circle
-        cx="13.889"
-        cy="13.889"
+        cx="11.889"
+        cy="11.889"
         r=".5"
-        transform="rotate(135 13.89 13.89)"
+        transform="rotate(135 11.89 11.889)"
       />
-      <circle cx="6.111" cy="6.111" r=".5" transform="rotate(135 6.11 6.11)" />
+      <circle cx="4.111" cy="4.111" r=".5" transform="rotate(135 4.11 4.11)" />
     </svg>
   );
 };

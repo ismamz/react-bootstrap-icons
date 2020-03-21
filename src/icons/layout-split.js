@@ -15,9 +15,10 @@ const LayoutSplit = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M1.5 5A2.5 2.5 0 014 2.5h12A2.5 2.5 0 0118.5 5v10a2.5 2.5 0 01-2.5 2.5H4A2.5 2.5 0 011.5 15V5zM4 3.5A1.5 1.5 0 002.5 5v10A1.5 1.5 0 004 16.5h12a1.5 1.5 0 001.5-1.5V5A1.5 1.5 0 0016 3.5h-5.5v13h-1v-13H4z"
+        d="M14 2H2a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zM2 1a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2H2z"
         clipRule="evenodd"
       />
+      <path fillRule="evenodd" d="M7.5 14V2h1v12h-1z" clipRule="evenodd" />
     </svg>
   );
 };

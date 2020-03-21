@@ -13,10 +13,10 @@ const LockFill = (props) => {
       fill={color}
       {...rest}
     >
-      <rect width="11" height="9" x="4.5" y="8" rx="2" />
+      <rect width="11" height="9" x="2.5" y="7" rx="2" />
       <path
         fillRule="evenodd"
-        d="M6.5 5a3.5 3.5 0 117 0v3h-1V5a2.5 2.5 0 00-5 0v3h-1V5z"
+        d="M4.5 4a3.5 3.5 0 117 0v3h-1V4a2.5 2.5 0 00-5 0v3h-1V4z"
         clipRule="evenodd"
       />
     </svg>

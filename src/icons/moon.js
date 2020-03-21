@@ -13,7 +13,11 @@ const Moon = (props) => {
       fill={color}
       {...rest}
     >
-      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.002 8.002 0 1010.586 10.586z" />
+      <path
+        fillRule="evenodd"
+        d="M14.53 10.53a7 7 0 01-9.058-9.058A7.003 7.003 0 008 15a7.002 7.002 0 006.53-4.47z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 };

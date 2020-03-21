@@ -15,10 +15,10 @@ const MusicPlayerFill = (props) => {
     >
       <path
         fillRule="evenodd"
-        d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 1a1 1 0 011-1h6a1 1 0 011 1v2.5a1 1 0 01-1 1H7a1 1 0 01-1-1V5zm7 8a3 3 0 11-6 0 3 3 0 016 0z"
+        d="M2 2a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V2zm2 1a1 1 0 011-1h6a1 1 0 011 1v2.5a1 1 0 01-1 1H5a1 1 0 01-1-1V3zm7 8a3 3 0 11-6 0 3 3 0 016 0z"
         clipRule="evenodd"
       />
-      <circle cx="10" cy="13" r="1" />
+      <circle cx="8" cy="11" r="1" />
     </svg>
   );
 };
