@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FolderSymlink = (props) => {
-  const { color, size, ...rest } = props;
-
+const FolderSymlink = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -22,7 +21,7 @@ const FolderSymlink = (props) => {
       <path d="M8.616 10.24l3.182-1.969a.443.443 0 000-.742l-3.182-1.97c-.27-.166-.616.036-.616.372V6.7c-.857 0-3.429 0-4 4.8 1.429-2.7 4-2.4 4-2.4v.769c0 .336.346.538.616.371z" />
     </svg>
   );
-};
+});
 
 FolderSymlink.propTypes = {
   color: PropTypes.string,

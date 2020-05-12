@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Compass = (props) => {
-  const { color, size, ...rest } = props;
-
+const Compass = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const Compass = (props) => {
       <path d="M6 1a1 1 0 011-1h2a1 1 0 010 2H7a1 1 0 01-1-1zm.94 6.44l4.95-2.83-2.83 4.95-4.95 2.83 2.83-4.95z" />
     </svg>
   );
-};
+});
 
 Compass.propTypes = {
   color: PropTypes.string,

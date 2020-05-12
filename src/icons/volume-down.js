@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const VolumeDown = (props) => {
-  const { color, size, ...rest } = props;
-
+const VolumeDown = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const VolumeDown = (props) => {
       <path d="M10.707 11.182A4.486 4.486 0 0012.025 8a4.486 4.486 0 00-1.318-3.182L10 5.525A3.489 3.489 0 0111.025 8c0 .966-.392 1.841-1.025 2.475l.707.707z" />
     </svg>
   );
-};
+});
 
 VolumeDown.propTypes = {
   color: PropTypes.string,

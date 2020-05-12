@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const SquareHalf = (props) => {
-  const { color, size, ...rest } = props;
-
+const SquareHalf = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -20,7 +19,7 @@ const SquareHalf = (props) => {
       />
     </svg>
   );
-};
+});
 
 SquareHalf.propTypes = {
   color: PropTypes.string,

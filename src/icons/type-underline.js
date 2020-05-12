@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TypeUnderline = (props) => {
-  const { color, size, ...rest } = props;
-
+const TypeUnderline = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -17,7 +16,7 @@ const TypeUnderline = (props) => {
       <path fillRule="evenodd" d="M12.5 15h-9v-1h9v1z" clipRule="evenodd" />
     </svg>
   );
-};
+});
 
 TypeUnderline.propTypes = {
   color: PropTypes.string,

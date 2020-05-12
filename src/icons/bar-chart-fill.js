@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BarChartFill = (props) => {
-  const { color, size, ...rest } = props;
-
+const BarChartFill = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -18,7 +17,7 @@ const BarChartFill = (props) => {
       <rect width="4" height="14" x="11" y="1" rx="1" />
     </svg>
   );
-};
+});
 
 BarChartFill.propTypes = {
   color: PropTypes.string,

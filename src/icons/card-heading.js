@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CardHeading = (props) => {
-  const { color, size, ...rest } = props;
-
+const CardHeading = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -26,7 +25,7 @@ const CardHeading = (props) => {
       <path d="M3 5.5a.5.5 0 01.5-.5h9a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-9a.5.5 0 01-.5-.5v-1z" />
     </svg>
   );
-};
+});
 
 CardHeading.propTypes = {
   color: PropTypes.string,

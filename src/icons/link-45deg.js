@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Link45deg = (props) => {
-  const { color, size, ...rest } = props;
-
+const Link45deg = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -19,7 +18,7 @@ const Link45deg = (props) => {
       <path d="M10 9.5a2.99 2.99 0 00.288-1.46l-.167.167a1.99 1.99 0 01-.896.518 1.99 1.99 0 01-.518.896l-.167.167A3.004 3.004 0 0010 9.501z" />
     </svg>
   );
-};
+});
 
 Link45deg.propTypes = {
   color: PropTypes.string,

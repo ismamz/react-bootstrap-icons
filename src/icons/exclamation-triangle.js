@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ExclamationTriangle = (props) => {
-  const { color, size, ...rest } = props;
-
+const ExclamationTriangle = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const ExclamationTriangle = (props) => {
       <path d="M7.002 12a1 1 0 112 0 1 1 0 01-2 0zM7.1 5.995a.905.905 0 111.8 0l-.35 3.507a.552.552 0 01-1.1 0L7.1 5.995z" />
     </svg>
   );
-};
+});
 
 ExclamationTriangle.propTypes = {
   color: PropTypes.string,

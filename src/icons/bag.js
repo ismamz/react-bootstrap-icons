@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Bag = (props) => {
-  const { color, size, ...rest } = props;
-
+const Bag = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const Bag = (props) => {
       <path d="M8 1.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z" />
     </svg>
   );
-};
+});
 
 Bag.propTypes = {
   color: PropTypes.string,

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FileEarmark = (props) => {
-  const { color, size, ...rest } = props;
-
+const FileEarmark = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -17,7 +16,7 @@ const FileEarmark = (props) => {
       <path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 019 4.5z" />
     </svg>
   );
-};
+});
 
 FileEarmark.propTypes = {
   color: PropTypes.string,

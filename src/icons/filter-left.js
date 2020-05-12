@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FilterLeft = (props) => {
-  const { color, size, ...rest } = props;
-
+const FilterLeft = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -20,7 +19,7 @@ const FilterLeft = (props) => {
       />
     </svg>
   );
-};
+});
 
 FilterLeft.propTypes = {
   color: PropTypes.string,

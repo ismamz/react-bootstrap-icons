@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CardList = (props) => {
-  const { color, size, ...rest } = props;
-
+const CardList = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -28,7 +27,7 @@ const CardList = (props) => {
       <circle cx="3.5" cy="10.5" r=".5" />
     </svg>
   );
-};
+});
 
 CardList.propTypes = {
   color: PropTypes.string,

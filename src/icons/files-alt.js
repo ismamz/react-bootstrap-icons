@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FilesAlt = (props) => {
-  const { color, size, ...rest } = props;
-
+const FilesAlt = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const FilesAlt = (props) => {
       <path d="M13 4V3a2 2 0 012 2v6a2 2 0 01-2 2v-1a1 1 0 001-1V5a1 1 0 00-1-1z" />
     </svg>
   );
-};
+});
 
 FilesAlt.propTypes = {
   color: PropTypes.string,

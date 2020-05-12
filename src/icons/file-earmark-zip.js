@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FileEarmarkZip = (props) => {
-  const { color, size, ...rest } = props;
-
+const FileEarmarkZip = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -23,7 +22,7 @@ const FileEarmarkZip = (props) => {
       <path d="M6 2h1.5v1H6zM5 3h1.5v1H5zm1 1h1.5v1H6zM5 5h1.5v1H5zm1 1h1.5v1H6V6z" />
     </svg>
   );
-};
+});
 
 FileEarmarkZip.propTypes = {
   color: PropTypes.string,

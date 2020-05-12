@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Table = (props) => {
-  const { color, size, ...rest } = props;
-
+const Table = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -32,7 +31,7 @@ const Table = (props) => {
       <path d="M0 2a2 2 0 012-2h12a2 2 0 012 2v2H0V2z" />
     </svg>
   );
-};
+});
 
 Table.propTypes = {
   color: PropTypes.string,

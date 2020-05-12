@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MicMute = (props) => {
-  const { color, size, ...rest } = props;
-
+const MicMute = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const MicMute = (props) => {
       <path stroke="#000" d="M2 1l12 12" />
     </svg>
   );
-};
+});
 
 MicMute.propTypes = {
   color: PropTypes.string,

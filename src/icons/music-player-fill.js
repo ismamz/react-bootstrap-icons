@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MusicPlayerFill = (props) => {
-  const { color, size, ...rest } = props;
-
+const MusicPlayerFill = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const MusicPlayerFill = (props) => {
       <circle cx="8" cy="11" r="1" />
     </svg>
   );
-};
+});
 
 MusicPlayerFill.propTypes = {
   color: PropTypes.string,

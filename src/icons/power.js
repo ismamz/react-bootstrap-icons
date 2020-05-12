@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Power = (props) => {
-  const { color, size, ...rest } = props;
-
+const Power = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const Power = (props) => {
       <path fillRule="evenodd" d="M7.5 8V1h1v7h-1z" clipRule="evenodd" />
     </svg>
   );
-};
+});
 
 Power.propTypes = {
   color: PropTypes.string,

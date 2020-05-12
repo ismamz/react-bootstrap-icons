@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Images = (props) => {
-  const { color, size, ...rest } = props;
-
+const Images = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -26,7 +25,7 @@ const Images = (props) => {
       />
     </svg>
   );
-};
+});
 
 Images.propTypes = {
   color: PropTypes.string,

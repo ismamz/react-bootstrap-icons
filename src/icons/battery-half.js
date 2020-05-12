@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BatteryHalf = (props) => {
-  const { color, size, ...rest } = props;
-
+const BatteryHalf = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const BatteryHalf = (props) => {
       <path d="M2 6h5v4H2V6zm12.5 3.5a1.5 1.5 0 000-3v3z" />
     </svg>
   );
-};
+});
 
 BatteryHalf.propTypes = {
   color: PropTypes.string,

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Outlet = (props) => {
-  const { color, size, ...rest } = props;
-
+const Outlet = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -26,7 +25,7 @@ const Outlet = (props) => {
       <path d="M7 10v1h2v-1a1 1 0 00-2 0z" />
     </svg>
   );
-};
+});
 
 Outlet.propTypes = {
   color: PropTypes.string,

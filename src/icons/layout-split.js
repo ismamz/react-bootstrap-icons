@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const LayoutSplit = (props) => {
-  const { color, size, ...rest } = props;
-
+const LayoutSplit = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const LayoutSplit = (props) => {
       <path fillRule="evenodd" d="M7.5 14V2h1v12h-1z" clipRule="evenodd" />
     </svg>
   );
-};
+});
 
 LayoutSplit.propTypes = {
   color: PropTypes.string,

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const LayoutSidebarInset = (props) => {
-  const { color, size, ...rest } = props;
-
+const LayoutSidebarInset = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const LayoutSidebarInset = (props) => {
       <path d="M3 4a1 1 0 011-1h2a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
     </svg>
   );
-};
+});
 
 LayoutSidebarInset.propTypes = {
   color: PropTypes.string,

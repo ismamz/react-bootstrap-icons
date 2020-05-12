@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AwardFill = (props) => {
-  const { color, size, ...rest } = props;
-
+const AwardFill = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -17,7 +16,7 @@ const AwardFill = (props) => {
       <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
     </svg>
   );
-};
+});
 
 AwardFill.propTypes = {
   color: PropTypes.string,

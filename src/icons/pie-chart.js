@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PieChart = (props) => {
-  const { color, size, ...rest } = props;
-
+const PieChart = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -25,7 +24,7 @@ const PieChart = (props) => {
       />
     </svg>
   );
-};
+});
 
 PieChart.propTypes = {
   color: PropTypes.string,

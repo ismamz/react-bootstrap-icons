@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ChatSquareQuote = (props) => {
-  const { color, size, ...rest } = props;
-
+const ChatSquareQuote = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -32,7 +31,7 @@ const ChatSquareQuote = (props) => {
       />
     </svg>
   );
-};
+});
 
 ChatSquareQuote.propTypes = {
   color: PropTypes.string,

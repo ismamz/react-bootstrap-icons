@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BookmarksFill = (props) => {
-  const { color, size, ...rest } = props;
-
+const BookmarksFill = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -21,7 +20,7 @@ const BookmarksFill = (props) => {
       <path d="M14 14l-1-.6V2a1 1 0 00-1-1H4.268A2 2 0 016 0h6a2 2 0 012 2v12z" />
     </svg>
   );
-};
+});
 
 BookmarksFill.propTypes = {
   color: PropTypes.string,

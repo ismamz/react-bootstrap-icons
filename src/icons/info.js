@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Info = (props) => {
-  const { color, size, ...rest } = props;
-
+const Info = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -17,7 +16,7 @@ const Info = (props) => {
       <circle cx="8" cy="4.5" r="1" />
     </svg>
   );
-};
+});
 
 Info.propTypes = {
   color: PropTypes.string,

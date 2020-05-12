@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const DropletHalf = (props) => {
-  const { color, size, ...rest } = props;
-
+const DropletHalf = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -26,7 +25,7 @@ const DropletHalf = (props) => {
       <path d="M14 10a6 6 0 01-12 0s2.5 2.5 6.5.5S14 10 14 10z" />
     </svg>
   );
-};
+});
 
 DropletHalf.propTypes = {
   color: PropTypes.string,

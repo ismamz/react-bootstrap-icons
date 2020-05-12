@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Kanban = (props) => {
-  const { color, size, ...rest } = props;
-
+const Kanban = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -23,7 +22,7 @@ const Kanban = (props) => {
       <rect width="3" height="12" x="10.5" y="2" rx="1" />
     </svg>
   );
-};
+});
 
 Kanban.propTypes = {
   color: PropTypes.string,

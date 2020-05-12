@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TypeStrikethrough = (props) => {
-  const { color, size, ...rest } = props;
-
+const TypeStrikethrough = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -17,7 +16,7 @@ const TypeStrikethrough = (props) => {
       <path fillRule="evenodd" d="M15 8.5H1v-1h14v1z" clipRule="evenodd" />
     </svg>
   );
-};
+});
 
 TypeStrikethrough.propTypes = {
   color: PropTypes.string,

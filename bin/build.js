@@ -12,6 +12,23 @@ if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
 }
 
+const initialTypeDefinitions = `/// <reference types="react" />
+import { ComponentType, SVGAttributes } from 'react';
+
+interface Props extends SVGAttributes<SVGElement> {
+  color?: string;
+  size?: string | number;
+}
+
+type Icon = ComponentType<Props>;
+`;
+
+fs.writeFileSync(
+  path.join(rootDir, 'src', 'index.d.ts'),
+  initialTypeDefinitions,
+  'utf-8',
+);
+
 fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
 
 let n = 0;
@@ -23,14 +40,13 @@ fs.readdirSync(iconsDir).forEach((file) => {
   const svgContent = svg.replace(/<svg[^>]*>|<\/svg>/g, '');
 
   const preComponent = `
-    import React from 'react';
+    import React, { forwardRef } from 'react';
     import PropTypes from 'prop-types';
 
-    const ${ComponentName} = props => {
-      const { color, size, ...rest } = props;
-
+    const ${ComponentName} = forwardRef(({ color, size, ...rest }, ref) => {
       return (
         <svg
+          ref={ref}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           width={size}
@@ -41,7 +57,7 @@ fs.readdirSync(iconsDir).forEach((file) => {
           ${svgContent}
         </svg>
       );
-    };
+    });
 
     ${ComponentName}.propTypes = {
       color: PropTypes.string,
@@ -79,6 +95,13 @@ fs.readdirSync(iconsDir).forEach((file) => {
 
   const exportString = `export { default as ${ComponentName} } from './icons/${fileName}';\r\n`;
   fs.appendFileSync(path.join(rootDir, 'src', 'index.js'), exportString, 'utf-8');
+
+  const exportTypeString = `export const ${ComponentName}: Icon;\n`;
+  fs.appendFileSync(
+    path.join(rootDir, 'src', 'index.d.ts'),
+    exportTypeString,
+    'utf-8',
+  );
 
   console.log(`${fileName} was created.`);
   n++;

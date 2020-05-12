@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BrightnessLow = (props) => {
-  const { color, size, ...rest } = props;
-
+const BrightnessLow = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width={size}
@@ -33,7 +32,7 @@ const BrightnessLow = (props) => {
       <circle cx="4.111" cy="4.111" r=".5" transform="rotate(135 4.11 4.11)" />
     </svg>
   );
-};
+});
 
 BrightnessLow.propTypes = {
   color: PropTypes.string,
