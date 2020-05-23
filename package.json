@@ -4,6 +4,7 @@
   "description": "React component for Bootstrap Icons",
   "main": "build/index.js",
   "module": "dist/index.js",
+  "files": ["dist/**"],
   "repository": "https://github.com/ismamz/react-bootstrap-icons",
   "author": "Ismael Martínez",
   "license": "MIT",
@@ -13,7 +14,8 @@
     "compile": "rm -rf src/icons && node bin/build.js",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
     "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
-    "build": "concurrently \"npm:build:*\""
+    "build": "concurrently \"npm:build:*\"",
+    "prepare": "npm run build"
   },
   "keywords": [
     "react",
