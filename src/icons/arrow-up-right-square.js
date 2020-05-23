@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PeopleCircle = forwardRef(({ color, size, ...rest }, ref) => {
+const ArrowUpRightSquare = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,29 +12,26 @@ const PeopleCircle = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
-      <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 008 15a6.987 6.987 0 005.468-2.63z" />
       <path
         fillRule="evenodd"
-        d="M8 9a3 3 0 100-6 3 3 0 000 6z"
-        clipRule="evenodd"
+        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
       />
       <path
         fillRule="evenodd"
-        d="M8 1a7 7 0 100 14A7 7 0 008 1zM0 8a8 8 0 1116 0A8 8 0 010 8z"
-        clipRule="evenodd"
+        d="M10.5 5h-4a.5.5 0 0 0 0 1h2.793l-4.147 4.146a.5.5 0 0 0 .708.708L10 6.707V9.5a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5z"
       />
     </svg>
   );
 });
 
-PeopleCircle.propTypes = {
+ArrowUpRightSquare.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-PeopleCircle.defaultProps = {
+ArrowUpRightSquare.defaultProps = {
   color: 'currentColor',
   size: '1em',
 };
 
-export default PeopleCircle;
+export default ArrowUpRightSquare;

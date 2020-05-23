@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CheckBox = forwardRef(({ color, size, ...rest }, ref) => {
+const ArrowRightCircle = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -14,26 +14,28 @@ const CheckBox = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z"
-        clipRule="evenodd"
+        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
       />
       <path
         fillRule="evenodd"
-        d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z"
-        clipRule="evenodd"
+        d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
+      />
+      <path
+        fillRule="evenodd"
+        d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
       />
     </svg>
   );
 });
 
-CheckBox.propTypes = {
+ArrowRightCircle.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CheckBox.defaultProps = {
+ArrowRightCircle.defaultProps = {
   color: 'currentColor',
   size: '1em',
 };
 
-export default CheckBox;
+export default ArrowRightCircle;

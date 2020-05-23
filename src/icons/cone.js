@@ -15,8 +15,7 @@ const Cone = forwardRef(({ color, size, ...rest }, ref) => {
       <path d="M7.03 1.88c.252-1.01 1.688-1.01 1.94 0L12 14H4L7.03 1.88z" />
       <path
         fillRule="evenodd"
-        d="M1.5 14a.5.5 0 01.5-.5h12a.5.5 0 010 1H2a.5.5 0 01-.5-.5z"
-        clipRule="evenodd"
+        d="M1.5 14a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5z"
       />
     </svg>
   );

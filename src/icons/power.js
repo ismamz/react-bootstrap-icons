@@ -14,10 +14,9 @@ const Power = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z"
-        clipRule="evenodd"
+        d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"
       />
-      <path fillRule="evenodd" d="M7.5 8V1h1v7h-1z" clipRule="evenodd" />
+      <path fillRule="evenodd" d="M7.5 8V1h1v7h-1z" />
     </svg>
   );
 });

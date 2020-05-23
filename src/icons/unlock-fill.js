@@ -12,11 +12,10 @@ const UnlockFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
-      <path d="M.5 9a2 2 0 012-2h7a2 2 0 012 2v5a2 2 0 01-2 2h-7a2 2 0 01-2-2V9z" />
+      <path d="M.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z" />
       <path
         fillRule="evenodd"
-        d="M8.5 4a3.5 3.5 0 117 0v3h-1V4a2.5 2.5 0 00-5 0v3h-1V4z"
-        clipRule="evenodd"
+        d="M8.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"
       />
     </svg>
   );

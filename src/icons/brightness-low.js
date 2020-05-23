@@ -14,8 +14,7 @@ const BrightnessLow = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M8 11a3 3 0 100-6 3 3 0 000 6zm0 1a4 4 0 100-8 4 4 0 000 8z"
-        clipRule="evenodd"
+        d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
       />
       <circle cx="8" cy="2.5" r=".5" />
       <circle cx="8" cy="13.5" r=".5" />

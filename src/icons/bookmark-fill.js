@@ -14,8 +14,7 @@ const BookmarkFill = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M3 3a2 2 0 012-2h6a2 2 0 012 2v12l-5-3-5 3V3z"
-        clipRule="evenodd"
+        d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"
       />
     </svg>
   );

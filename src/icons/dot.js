@@ -14,8 +14,7 @@ const Dot = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-        clipRule="evenodd"
+        d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
       />
     </svg>
   );

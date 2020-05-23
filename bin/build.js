@@ -107,4 +107,4 @@ fs.readdirSync(iconsDir).forEach((file) => {
   n++;
 });
 
-console.log(`\nSuccess! ${n} icons was created.`);
+console.log(`\nSuccess! ${n} icons where created.`);
