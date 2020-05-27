@@ -16,12 +16,10 @@ const GraphUp = forwardRef(({ color, size, ...rest }, ref) => {
       <path
         fillRule="evenodd"
         d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"
-        clipRule="evenodd"
       />
       <path
         fillRule="evenodd"
-        d="M10 3.5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V4h-3.5a.5.5 0 01-.5-.5z"
-        clipRule="evenodd"
+        d="M10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4h-3.5a.5.5 0 0 1-.5-.5z"
       />
     </svg>
   );

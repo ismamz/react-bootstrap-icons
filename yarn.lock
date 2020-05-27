@@ -1447,10 +1447,10 @@ binary-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.13.1.tgz#598afe54755b2868a5330d2aff9d4ebb53209b65"
   integrity sha512-Un7MIEDdUC5gNpcGDV97op1Ywk748MpHcFTHoYs6qnj1Z3j7I53VG3nwZhKzoBZmbdRNnb6WRdFlwl7tSDuZGw==
 
-bootstrap-icons@^1.0.0-alpha3:
-  version "1.0.0-alpha3"
-  resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.0.0-alpha3.tgz#413171e88b79315e712e6ab65601f64b1735d566"
-  integrity sha512-UO++43jb/qlWVsC31WkHOjFsTihJkSz0wngnUS+P1ImcCMTqDJqDHySld+hpkzxi+q6fL8iom7nfT3ApAxZ6cQ==
+bootstrap-icons@^1.0.0-alpha4:
+  version "1.0.0-alpha4"
+  resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.0.0-alpha4.tgz#b3eb7ca170696892bce19bf085601d4157831d4e"
+  integrity sha512-UcpSUPsvUiW7ueBQfXZSgknJv/rj060dglhWIRPjkLjUWa32jMWqsLXO8tXY2od4Ew6cuh0BJ3f8VOhQPVY4mA==
 
 brace-expansion@^1.1.7:
   version "1.1.11"

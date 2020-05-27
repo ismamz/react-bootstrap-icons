@@ -14,8 +14,7 @@ const CircleHalf = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M8 15V1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z"
-        clipRule="evenodd"
+        d="M8 15V1a7 7 0 1 1 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
       />
     </svg>
   );

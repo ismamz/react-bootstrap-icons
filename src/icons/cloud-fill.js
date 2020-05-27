@@ -14,8 +14,7 @@ const CloudFill = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M3.5 13a3.5 3.5 0 11.59-6.95 5.002 5.002 0 119.804 1.98A2.5 2.5 0 0113.5 13h-10z"
-        clipRule="evenodd"
+        d="M3.5 13a3.5 3.5 0 1 1 .59-6.95 5.002 5.002 0 1 1 9.804 1.98A2.5 2.5 0 0 1 13.5 13h-10z"
       />
     </svg>
   );
