@@ -4,7 +4,7 @@ The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use 
 
 > Currently v1.0.0-alpha4, +670 icons.
 
-<small>They're in alpha right now and subject to sweeping changes.</small>
+They're in alpha right now and subject to sweeping changes.
 
 <img src="https://api.framer.com/store/assets/ismael/bootstrap-icons/artwork.png?ODhmNDI">
 
