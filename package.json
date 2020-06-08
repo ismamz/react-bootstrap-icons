@@ -7,6 +7,7 @@
   "repository": "https://github.com/ismamz/react-bootstrap-icons",
   "author": "Ismael Martínez",
   "license": "MIT",
+  "sideEffects": false,
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
