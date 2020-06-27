@@ -1,0 +1,37 @@
+import React, { forwardRef } from 'react';
+import PropTypes from 'prop-types';
+
+const StickiesFill = forwardRef(({ color, size, ...rest }, ref) => {
+  return (
+    <svg
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill={color}
+      {...rest}
+    >
+      <path
+        fillRule="evenodd"
+        d="M0 1.5A1.5 1.5 0 0 1 1.5 0H13a1 1 0 0 1 1 1H1.5a.5.5 0 0 0-.5.5V14a1 1 0 0 1-1-1V1.5z"
+      />
+      <path
+        fillRule="evenodd"
+        d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2h-11zm6 8.5v4.396c0 .223.27.335.427.177l5.146-5.146a.25.25 0 0 0-.177-.427H10.5a1 1 0 0 0-1 1z"
+      />
+    </svg>
+  );
+});
+
+StickiesFill.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
+
+StickiesFill.defaultProps = {
+  color: 'currentColor',
+  size: '1em',
+};
+
+export default StickiesFill;
