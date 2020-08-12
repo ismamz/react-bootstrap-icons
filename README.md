@@ -53,3 +53,12 @@ export default function App() => {
   return <Icon.ArrowRight />
 };
 ```
+
+## Figma Plugin
+
+You can install it from Figma app: [Bootstrap Icons Plugin for Figma](https://www.figma.com/community/plugin/868341386266170307/Bootstrap-Icons)
+
+## License
+
+* react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
+* Bootstrap Icons are open sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)).
