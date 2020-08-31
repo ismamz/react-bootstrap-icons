@@ -14,9 +14,8 @@ const FileBreakFill = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M0 10.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"
+        d="M12 0H4a2 2 0 0 0-2 2v7h12V2a2 2 0 0 0-2-2zm2 12H2v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2zM0 10.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"
       />
-      <path d="M12 1H4a2 2 0 0 0-2 2v6h12V3a2 2 0 0 0-2-2zm2 11H2v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1z" />
     </svg>
   );
 });

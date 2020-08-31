@@ -12,12 +12,9 @@ const BarChartLineFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
-      <rect width="4" height="5" x="1" y="10" rx="1" />
-      <rect width="4" height="9" x="6" y="6" rx="1" />
-      <rect width="4" height="14" x="11" y="1" rx="1" />
       <path
         fillRule="evenodd"
-        d="M0 14.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"
+        d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"
       />
     </svg>
   );

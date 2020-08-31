@@ -14,11 +14,7 @@ const ArrowDownLeft = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M3 7.5a.5.5 0 0 1 .5.5v4.5H8a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5V8a.5.5 0 0 1 .5-.5z"
-      />
-      <path
-        fillRule="evenodd"
-        d="M12.354 3.646a.5.5 0 0 1 0 .708l-9 9a.5.5 0 0 1-.708-.708l9-9a.5.5 0 0 1 .708 0z"
+        d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"
       />
     </svg>
   );

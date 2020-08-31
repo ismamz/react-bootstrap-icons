@@ -18,7 +18,7 @@ const SlashCircle = forwardRef(({ color, size, ...rest }, ref) => {
       />
       <path
         fillRule="evenodd"
-        d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"
+        d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0z"
       />
     </svg>
   );

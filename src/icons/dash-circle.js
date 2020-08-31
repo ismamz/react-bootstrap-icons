@@ -18,7 +18,7 @@ const DashCircle = forwardRef(({ color, size, ...rest }, ref) => {
       />
       <path
         fillRule="evenodd"
-        d="M3.5 8a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z"
+        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
       />
     </svg>
   );
