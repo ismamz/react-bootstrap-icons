@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FileEarmarkBreakFill = forwardRef(({ color, size, ...rest }, ref) => {
+const FilePptFill = forwardRef(({ color, size, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -14,20 +14,20 @@ const FileEarmarkBreakFill = forwardRef(({ color, size, ...rest }, ref) => {
     >
       <path
         fillRule="evenodd"
-        d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V9H2V2zm0 10v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2H2zm7.5-8.5v-2l3 3h-2a1 1 0 0 1-1-1zm-9.5 7a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"
+        d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.5 4.5a.5.5 0 0 0-1 0V12a.5.5 0 0 0 1 0V9.236a3 3 0 1 0 0-4.472V4.5zm0 2.5a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
       />
     </svg>
   );
 });
 
-FileEarmarkBreakFill.propTypes = {
+FilePptFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-FileEarmarkBreakFill.defaultProps = {
+FilePptFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
 };
 
-export default FileEarmarkBreakFill;
+export default FilePptFill;
