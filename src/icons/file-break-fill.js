@@ -12,10 +12,7 @@ const FileBreakFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
-      <path
-        fillRule="evenodd"
-        d="M12 0H4a2 2 0 0 0-2 2v7h12V2a2 2 0 0 0-2-2zm2 12H2v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2zM0 10.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"
-      />
+      <path d="M4 0h8a2 2 0 0 1 2 2v7H2V2a2 2 0 0 1 2-2zM2 12h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2zM.5 10a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5z" />
     </svg>
   );
 });

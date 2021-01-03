@@ -12,10 +12,7 @@ const RecordBtnFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
-      <path
-        fillRule="evenodd"
-        d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-      />
+      <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
     </svg>
   );
 });
