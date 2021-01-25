@@ -56,6 +56,10 @@ export default function App() => {
 
 You can install it from Figma app: [Bootstrap Icons Plugin for Figma](https://www.figma.com/community/plugin/868341386266170307/Bootstrap-Icons)
 
+## More options
+
+Other ways to use Boostrap icons: [https://icons.getbootstrap.com/#usage](https://icons.getbootstrap.com/#usage)
+
 ## License
 
 * react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
