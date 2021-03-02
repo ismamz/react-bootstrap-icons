@@ -2,7 +2,7 @@
 
 The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use as React components.
 
-> Currently v1.3.0, **1265 icons!**
+> Currently v1.4.0, **1325 icons!**
 
 <img src="https://api.framer.com/store/assets/ismael/bootstrap-icons/artwork.png?ODhmNDI">
 
@@ -62,5 +62,5 @@ Other ways to use Boostrap icons: [https://icons.getbootstrap.com/#usage](https:
 
 ## License
 
-* react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
-* Bootstrap Icons are open sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)).
+- react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
+- Bootstrap Icons are open sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)).
