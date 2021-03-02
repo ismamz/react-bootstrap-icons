@@ -64,3 +64,7 @@ Other ways to use Boostrap icons: [https://icons.getbootstrap.com/#usage](https:
 
 - react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
 - Bootstrap Icons are open sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)).
+
+## Collaborators
+
+- [@kwnath](https://github.com/kwnath)
