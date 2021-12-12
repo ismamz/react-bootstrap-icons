@@ -2,7 +2,7 @@
 
 The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use as React components.
 
-> Currently v1.6.1, over **1400 icons!**
+> Currently v1.7.2, over **1500 icons!**
 
 <img src="https://api.framer.com/store/assets/ismael/bootstrap-icons/artwork.png?ODhmNDI">
 
