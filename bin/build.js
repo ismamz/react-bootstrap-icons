@@ -36,7 +36,10 @@ let n = 0;
 fs.readdirSync(iconsDir).forEach((file) => {
   const svg = fs.readFileSync(`${iconsDir}/${file}`, 'utf8');
   const fileName = file.split('.')[0];
-  const ComponentName = upperCamelCase(fileName);
+  let ComponentName = upperCamelCase(fileName);
+  if(ComponentName.match(/^\d/)) {
+    ComponentName = `Icon${ComponentName}`;
+  }
   const svgContent = svg.replace(/<svg[^>]*>|<\/svg>/g, '');
 
   const preComponent = `
