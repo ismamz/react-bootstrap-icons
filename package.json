@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-icons",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "React component for Bootstrap Icons",
   "main": "build/index.js",
   "module": "dist/index.js",
@@ -44,7 +44,7 @@
     "uppercamelcase": "^3.0.0"
   },
   "peerDependencies": {
-    "react": "^16.8.6 || ^17 || ^18"
+    "react": ">=16.8.6"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
