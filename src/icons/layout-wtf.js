@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const LayoutWtf = forwardRef(({ color, size, ...rest }, ref) => {
+const LayoutWtf = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const LayoutWtf = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path d="M5 1v8H1V1h4zM1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm13 2v5H9V2h5zM9 1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9zM5 13v2H3v-2h2zm-2-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3zm12-1v2H9v-2h6zm-6-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H9z" />
     </svg>
   );
@@ -20,6 +23,7 @@ const LayoutWtf = forwardRef(({ color, size, ...rest }, ref) => {
 LayoutWtf.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 LayoutWtf.defaultProps = {

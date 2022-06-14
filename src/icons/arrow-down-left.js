@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowDownLeft = forwardRef(({ color, size, ...rest }, ref) => {
+const ArrowDownLeft = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const ArrowDownLeft = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path
         fillRule="evenodd"
         d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"
@@ -23,6 +26,7 @@ const ArrowDownLeft = forwardRef(({ color, size, ...rest }, ref) => {
 ArrowDownLeft.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 ArrowDownLeft.defaultProps = {

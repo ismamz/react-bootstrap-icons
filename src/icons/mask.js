@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Mask = forwardRef(({ color, size, ...rest }, ref) => {
+const Mask = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const Mask = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546zM4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z" />
     </svg>
   );
@@ -20,6 +23,7 @@ const Mask = forwardRef(({ color, size, ...rest }, ref) => {
 Mask.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 Mask.defaultProps = {

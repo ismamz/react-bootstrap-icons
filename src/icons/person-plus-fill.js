@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PersonPlusFill = forwardRef(({ color, size, ...rest }, ref) => {
+const PersonPlusFill = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const PersonPlusFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
       <path
         fillRule="evenodd"
@@ -24,6 +27,7 @@ const PersonPlusFill = forwardRef(({ color, size, ...rest }, ref) => {
 PersonPlusFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 PersonPlusFill.defaultProps = {

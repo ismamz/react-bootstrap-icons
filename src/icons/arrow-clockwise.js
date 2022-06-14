@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowClockwise = forwardRef(({ color, size, ...rest }, ref) => {
+const ArrowClockwise = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const ArrowClockwise = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path
         fillRule="evenodd"
         d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
@@ -24,6 +27,7 @@ const ArrowClockwise = forwardRef(({ color, size, ...rest }, ref) => {
 ArrowClockwise.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 ArrowClockwise.defaultProps = {

@@ -18,6 +18,7 @@ import { ComponentType, SVGAttributes } from 'react';
 interface Props extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
+  title?: string;
 }
 
 type Icon = ComponentType<Props>;
@@ -26,14 +27,14 @@ type Icon = ComponentType<Props>;
 fs.writeFileSync(
   path.join(rootDir, 'src', 'index.d.ts'),
   initialTypeDefinitions,
-  'utf-8',
+  'utf-8'
 );
 
 fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
 
 let n = 0;
 
-fs.readdirSync(iconsDir).forEach((file) => {
+fs.readdirSync(iconsDir).forEach(file => {
   const svg = fs.readFileSync(`${iconsDir}/${file}`, 'utf8');
   const svgContent = svg.replace(/<svg[^>]*>|<\/svg>/g, '');
   const fileName = file.split('.')[0];
@@ -44,7 +45,7 @@ fs.readdirSync(iconsDir).forEach((file) => {
     import React, { forwardRef } from 'react';
     import PropTypes from 'prop-types';
 
-    const ${ComponentName} = forwardRef(({ color, size, ...rest }, ref) => {
+    const ${ComponentName} = forwardRef(({ color, size, title, ...rest }, ref) => {
       return (
         <svg
           ref={ref}
@@ -55,7 +56,7 @@ fs.readdirSync(iconsDir).forEach((file) => {
           fill={color}
           {...rest}
         >
-          ${svgContent}
+          {title ? <title>{title}</title> : null}${svgContent}
         </svg>
       );
     });
@@ -63,6 +64,7 @@ fs.readdirSync(iconsDir).forEach((file) => {
     ${ComponentName}.propTypes = {
       color: PropTypes.string,
       size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      title: PropTypes.string,
     };
 
     ${ComponentName}.defaultProps = {
@@ -76,7 +78,7 @@ fs.readdirSync(iconsDir).forEach((file) => {
   const component = format({
     text: preComponent,
     eslintConfig: {
-      extends: 'airbnb',
+      extends: 'airbnb'
     },
     prettierOptions: {
       singleQuote: true,
@@ -88,20 +90,28 @@ fs.readdirSync(iconsDir).forEach((file) => {
       printWidth: 80,
       tabWidth: 2,
       useTabs: false,
-      parser: 'flow',
-    },
+      parser: 'flow'
+    }
   });
 
-  fs.writeFileSync(path.join(rootDir, 'src/icons', `${fileName}.js`), component, 'utf-8');
+  fs.writeFileSync(
+    path.join(rootDir, 'src/icons', `${fileName}.js`),
+    component,
+    'utf-8'
+  );
 
   const exportString = `export { default as ${ComponentName} } from './icons/${fileName}';\r\n`;
-  fs.appendFileSync(path.join(rootDir, 'src', 'index.js'), exportString, 'utf-8');
+  fs.appendFileSync(
+    path.join(rootDir, 'src', 'index.js'),
+    exportString,
+    'utf-8'
+  );
 
   const exportTypeString = `export const ${ComponentName}: Icon;\n`;
   fs.appendFileSync(
     path.join(rootDir, 'src', 'index.d.ts'),
     exportTypeString,
-    'utf-8',
+    'utf-8'
   );
 
   console.log(`${fileName} was created.`);

@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PentagonFill = forwardRef(({ color, size, ...rest }, ref) => {
+const PentagonFill = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const PentagonFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path d="m8 0 8 6.5-3 9.5H3L0 6.5 8 0z" />
     </svg>
   );
@@ -20,6 +23,7 @@ const PentagonFill = forwardRef(({ color, size, ...rest }, ref) => {
 PentagonFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 PentagonFill.defaultProps = {
