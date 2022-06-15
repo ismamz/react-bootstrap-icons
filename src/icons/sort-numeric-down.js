@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const SortNumericDown = forwardRef(({ color, size, ...rest }, ref) => {
+const SortNumericDown = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const SortNumericDown = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path d="M12.438 1.668V7H11.39V2.684h-.051l-1.211.859v-.969l1.262-.906h1.046z" />
       <path
         fillRule="evenodd"
@@ -25,6 +28,7 @@ const SortNumericDown = forwardRef(({ color, size, ...rest }, ref) => {
 SortNumericDown.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 SortNumericDown.defaultProps = {

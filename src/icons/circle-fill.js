@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CircleFill = forwardRef(({ color, size, ...rest }, ref) => {
+const CircleFill = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const CircleFill = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <circle cx="8" cy="8" r="8" />
     </svg>
   );
@@ -20,6 +23,7 @@ const CircleFill = forwardRef(({ color, size, ...rest }, ref) => {
 CircleFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 CircleFill.defaultProps = {

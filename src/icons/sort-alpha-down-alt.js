@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const SortAlphaDownAlt = forwardRef(({ color, size, ...rest }, ref) => {
+const SortAlphaDownAlt = forwardRef(({
+  color, size, title, ...rest
+}, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,6 +14,7 @@ const SortAlphaDownAlt = forwardRef(({ color, size, ...rest }, ref) => {
       fill={color}
       {...rest}
     >
+      {title ? <title>{title}</title> : null}
       <path d="M12.96 7H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645V7z" />
       <path
         fillRule="evenodd"
@@ -25,6 +28,7 @@ const SortAlphaDownAlt = forwardRef(({ color, size, ...rest }, ref) => {
 SortAlphaDownAlt.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
 };
 
 SortAlphaDownAlt.defaultProps = {
