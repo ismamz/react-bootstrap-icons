@@ -15,6 +15,7 @@ const PiggyBank = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm1.138-1.496A6.613 6.613 0 0 1 7.964 4.5c.666 0 1.303.097 1.893.273a.5.5 0 0 0 .286-.958A7.602 7.602 0 0 0 7.964 3.5c-.734 0-1.441.103-2.102.292a.5.5 0 1 0 .276.962z" />
       <path
         fillRule="evenodd"
@@ -33,6 +34,7 @@ PiggyBank.propTypes = {
 PiggyBank.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default PiggyBank;

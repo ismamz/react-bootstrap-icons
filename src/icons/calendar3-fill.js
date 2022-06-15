@@ -15,6 +15,7 @@ const Calendar3Fill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2H0zm0 1v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3H0z" />
     </svg>
   );
@@ -29,6 +30,7 @@ Calendar3Fill.propTypes = {
 Calendar3Fill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Calendar3Fill;

@@ -15,6 +15,7 @@ const SdCard = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z" />
       <path
         fillRule="evenodd"
@@ -33,6 +34,7 @@ SdCard.propTypes = {
 SdCard.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default SdCard;

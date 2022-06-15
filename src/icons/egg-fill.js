@@ -15,6 +15,7 @@ const EggFill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M14 10a6 6 0 0 1-12 0C2 5.686 5 0 8 0s6 5.686 6 10z" />
     </svg>
   );
@@ -29,6 +30,7 @@ EggFill.propTypes = {
 EggFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default EggFill;

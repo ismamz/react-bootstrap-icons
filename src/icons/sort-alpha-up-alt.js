@@ -15,6 +15,7 @@ const SortAlphaUpAlt = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M12.96 7H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645V7z" />
       <path
         fillRule="evenodd"
@@ -34,6 +35,7 @@ SortAlphaUpAlt.propTypes = {
 SortAlphaUpAlt.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default SortAlphaUpAlt;

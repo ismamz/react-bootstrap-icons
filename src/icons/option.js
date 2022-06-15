@@ -15,6 +15,7 @@ const Option = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z" />
     </svg>
   );
@@ -29,6 +30,7 @@ Option.propTypes = {
 Option.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Option;

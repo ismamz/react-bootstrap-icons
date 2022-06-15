@@ -15,6 +15,7 @@ const CloudArrowDown = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"
@@ -33,6 +34,7 @@ CloudArrowDown.propTypes = {
 CloudArrowDown.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default CloudArrowDown;

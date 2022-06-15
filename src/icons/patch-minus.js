@@ -15,6 +15,7 @@ const PatchMinus = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"
@@ -33,6 +34,7 @@ PatchMinus.propTypes = {
 PatchMinus.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default PatchMinus;

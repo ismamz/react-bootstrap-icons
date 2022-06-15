@@ -15,6 +15,7 @@ const Grid1x2Fill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z" />
     </svg>
   );
@@ -29,6 +30,7 @@ Grid1x2Fill.propTypes = {
 Grid1x2Fill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Grid1x2Fill;

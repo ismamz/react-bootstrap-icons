@@ -16,6 +16,7 @@ const DistributeHorizontal = forwardRef(
         {...rest}
       >
         {title ? <title>{title}</title> : null}
+
         <path
           fillRule="evenodd"
           d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5zm-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"
@@ -35,6 +36,7 @@ DistributeHorizontal.propTypes = {
 DistributeHorizontal.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default DistributeHorizontal;

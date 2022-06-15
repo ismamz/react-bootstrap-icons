@@ -15,6 +15,7 @@ const BoxArrowInUpLeft = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M9.636 13.5a.5.5 0 0 1-.5.5H2.5A1.5 1.5 0 0 1 1 12.5v-10A1.5 1.5 0 0 1 2.5 1h10A1.5 1.5 0 0 1 14 2.5v6.636a.5.5 0 0 1-1 0V2.5a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h6.636a.5.5 0 0 1 .5.5z"
@@ -36,6 +37,7 @@ BoxArrowInUpLeft.propTypes = {
 BoxArrowInUpLeft.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default BoxArrowInUpLeft;

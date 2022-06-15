@@ -15,6 +15,7 @@ const Record2Fill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
       <path d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
     </svg>
@@ -30,6 +31,7 @@ Record2Fill.propTypes = {
 Record2Fill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Record2Fill;

@@ -15,6 +15,7 @@ const Pause = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
     </svg>
   );
@@ -29,6 +30,7 @@ Pause.propTypes = {
 Pause.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Pause;

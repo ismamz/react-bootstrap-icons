@@ -15,6 +15,7 @@ const RecordFill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path fillRule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
     </svg>
   );
@@ -29,6 +30,7 @@ RecordFill.propTypes = {
 RecordFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default RecordFill;

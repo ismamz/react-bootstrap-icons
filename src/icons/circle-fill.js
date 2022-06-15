@@ -15,6 +15,7 @@ const CircleFill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <circle cx="8" cy="8" r="8" />
     </svg>
   );
@@ -29,6 +30,7 @@ CircleFill.propTypes = {
 CircleFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default CircleFill;

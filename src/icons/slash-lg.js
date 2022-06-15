@@ -15,6 +15,7 @@ const SlashLg = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
@@ -32,6 +33,7 @@ SlashLg.propTypes = {
 SlashLg.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default SlashLg;

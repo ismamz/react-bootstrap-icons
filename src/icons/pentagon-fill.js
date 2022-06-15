@@ -15,7 +15,8 @@ const PentagonFill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
-      <path d="m8 0 8 6.5-3 9.5H3L0 6.5 8 0z" />
+
+      <path d="M7.685.256a.5.5 0 0 1 .63 0l7.421 6.03a.5.5 0 0 1 .162.538l-2.788 8.827a.5.5 0 0 1-.476.349H3.366a.5.5 0 0 1-.476-.35L.102 6.825a.5.5 0 0 1 .162-.538l7.42-6.03Z" />
     </svg>
   );
 });
@@ -29,6 +30,7 @@ PentagonFill.propTypes = {
 PentagonFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default PentagonFill;

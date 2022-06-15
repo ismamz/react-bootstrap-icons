@@ -15,6 +15,7 @@ const ListTask = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"
@@ -37,6 +38,7 @@ ListTask.propTypes = {
 ListTask.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default ListTask;

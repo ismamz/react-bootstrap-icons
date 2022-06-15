@@ -16,6 +16,7 @@ const DistributeVertical = forwardRef(
         {...rest}
       >
         {title ? <title>{title}</title> : null}
+
         <path
           fillRule="evenodd"
           d="M1 1.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5zm0 13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5z"
@@ -35,6 +36,7 @@ DistributeVertical.propTypes = {
 DistributeVertical.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default DistributeVertical;
