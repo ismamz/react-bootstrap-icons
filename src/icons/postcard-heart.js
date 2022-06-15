@@ -15,6 +15,7 @@ const PostcardHeart = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M8 4.5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm3.5.878c1.482-1.42 4.795 1.392 0 4.622-4.795-3.23-1.482-6.043 0-4.622ZM2.5 5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Z" />
       <path
         fillRule="evenodd"
@@ -33,6 +34,7 @@ PostcardHeart.propTypes = {
 PostcardHeart.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default PostcardHeart;

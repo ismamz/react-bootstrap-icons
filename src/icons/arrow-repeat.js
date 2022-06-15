@@ -15,6 +15,7 @@ const ArrowRepeat = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
       <path
         fillRule="evenodd"
@@ -33,6 +34,7 @@ ArrowRepeat.propTypes = {
 ArrowRepeat.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default ArrowRepeat;

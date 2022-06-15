@@ -15,6 +15,7 @@ const JournalBookmark = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"
@@ -34,6 +35,7 @@ JournalBookmark.propTypes = {
 JournalBookmark.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default JournalBookmark;

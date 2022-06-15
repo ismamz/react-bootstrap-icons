@@ -15,6 +15,7 @@ const BagCheck = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"
@@ -33,6 +34,7 @@ BagCheck.propTypes = {
 BagCheck.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default BagCheck;

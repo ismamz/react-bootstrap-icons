@@ -15,6 +15,7 @@ const UsbCFill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M3 5a3 3 0 0 0 0 6h10a3 3 0 1 0 0-6H3Zm.5 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1Z" />
     </svg>
   );
@@ -29,6 +30,7 @@ UsbCFill.propTypes = {
 UsbCFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default UsbCFill;

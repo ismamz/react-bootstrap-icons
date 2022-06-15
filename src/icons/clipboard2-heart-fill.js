@@ -16,6 +16,7 @@ const Clipboard2HeartFill = forwardRef(
         {...rest}
       >
         {title ? <title>{title}</title> : null}
+
         <path
           fillRule="evenodd"
           d="M10.058.501a.501.501 0 0 0-.5-.501h-2.98c-.276 0-.5.225-.5.501A.499.499 0 0 1 5.582 1a.497.497 0 0 0-.497.497V2a.5.5 0 0 0 .5.5h4.968a.5.5 0 0 0 .5-.5v-.503A.497.497 0 0 0 10.555 1a.499.499 0 0 1-.497-.499Z"
@@ -38,6 +39,7 @@ Clipboard2HeartFill.propTypes = {
 Clipboard2HeartFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Clipboard2HeartFill;

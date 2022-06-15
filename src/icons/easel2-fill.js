@@ -15,6 +15,7 @@ const Easel2Fill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M8.447.276a.5.5 0 0 0-.894 0L7.19 1H2.5A1.5 1.5 0 0 0 1 2.5V10h14V2.5A1.5 1.5 0 0 0 13.5 1H8.809L8.447.276Z" />
       <path
         fillRule="evenodd"
@@ -33,6 +34,7 @@ Easel2Fill.propTypes = {
 Easel2Fill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default Easel2Fill;

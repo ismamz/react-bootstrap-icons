@@ -15,6 +15,7 @@ const PinMapFill = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
@@ -36,6 +37,7 @@ PinMapFill.propTypes = {
 PinMapFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default PinMapFill;

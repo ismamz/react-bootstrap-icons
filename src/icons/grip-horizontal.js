@@ -15,6 +15,7 @@ const GripHorizontal = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
     </svg>
   );
@@ -29,6 +30,7 @@ GripHorizontal.propTypes = {
 GripHorizontal.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default GripHorizontal;

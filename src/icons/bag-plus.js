@@ -15,6 +15,7 @@ const BagPlus = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"
@@ -33,6 +34,7 @@ BagPlus.propTypes = {
 BagPlus.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default BagPlus;

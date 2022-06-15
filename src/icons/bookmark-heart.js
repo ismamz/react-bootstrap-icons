@@ -15,6 +15,7 @@ const BookmarkHeart = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"
@@ -33,6 +34,7 @@ BookmarkHeart.propTypes = {
 BookmarkHeart.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default BookmarkHeart;

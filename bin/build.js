@@ -56,7 +56,8 @@ fs.readdirSync(iconsDir).forEach(file => {
           fill={color}
           {...rest}
         >
-          {title ? <title>{title}</title> : null}${svgContent}
+          {title ? <title>{title}</title> : null}
+          ${svgContent}
         </svg>
       );
     });
@@ -70,6 +71,7 @@ fs.readdirSync(iconsDir).forEach(file => {
     ${ComponentName}.defaultProps = {
       color: 'currentColor',
       size: '1em',
+      title: null,
     };
 
     export default ${ComponentName};

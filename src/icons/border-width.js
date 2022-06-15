@@ -15,6 +15,7 @@ const BorderWidth = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
     </svg>
   );
@@ -29,6 +30,7 @@ BorderWidth.propTypes = {
 BorderWidth.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default BorderWidth;

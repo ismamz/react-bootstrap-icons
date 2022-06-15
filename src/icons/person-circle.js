@@ -15,6 +15,7 @@ const PersonCircle = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
       <path
         fillRule="evenodd"
@@ -33,6 +34,7 @@ PersonCircle.propTypes = {
 PersonCircle.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default PersonCircle;

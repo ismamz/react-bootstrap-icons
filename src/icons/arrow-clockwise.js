@@ -15,6 +15,7 @@ const ArrowClockwise = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
@@ -33,6 +34,7 @@ ArrowClockwise.propTypes = {
 ArrowClockwise.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default ArrowClockwise;

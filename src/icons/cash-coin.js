@@ -15,6 +15,7 @@ const CashCoin = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"
@@ -35,6 +36,7 @@ CashCoin.propTypes = {
 CashCoin.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default CashCoin;

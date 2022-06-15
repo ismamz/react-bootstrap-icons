@@ -15,6 +15,7 @@ const ChevronDoubleDown = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
@@ -36,6 +37,7 @@ ChevronDoubleDown.propTypes = {
 ChevronDoubleDown.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default ChevronDoubleDown;

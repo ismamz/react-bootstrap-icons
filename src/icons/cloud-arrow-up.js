@@ -15,6 +15,7 @@ const CloudArrowUp = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"
@@ -33,6 +34,7 @@ CloudArrowUp.propTypes = {
 CloudArrowUp.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default CloudArrowUp;

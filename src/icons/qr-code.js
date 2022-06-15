@@ -15,6 +15,7 @@ const QrCode = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M2 2h2v2H2V2Z" />
       <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z" />
       <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z" />
@@ -33,6 +34,7 @@ QrCode.propTypes = {
 QrCode.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default QrCode;

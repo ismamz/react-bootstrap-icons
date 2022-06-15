@@ -15,6 +15,7 @@ const SortNumericUp = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path d="M12.438 1.668V7H11.39V2.684h-.051l-1.211.859v-.969l1.262-.906h1.046z" />
       <path
         fillRule="evenodd"
@@ -34,6 +35,7 @@ SortNumericUp.propTypes = {
 SortNumericUp.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default SortNumericUp;

@@ -15,6 +15,7 @@ const ClipboardMinus = forwardRef(({
       {...rest}
     >
       {title ? <title>{title}</title> : null}
+
       <path
         fillRule="evenodd"
         d="M5.5 9.5A.5.5 0 0 1 6 9h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"
@@ -34,6 +35,7 @@ ClipboardMinus.propTypes = {
 ClipboardMinus.defaultProps = {
   color: 'currentColor',
   size: '1em',
+  title: null,
 };
 
 export default ClipboardMinus;
