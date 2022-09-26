@@ -375,7 +375,7 @@ export { default as CashCoin } from './icons/cash-coin';
 export { default as CashStack } from './icons/cash-stack';
 export { default as Cash } from './icons/cash';
 export { default as Cast } from './icons/cast';
-export { default as CCircleFill } from './icons/c-circl-fill';
+export { default as CCircleFill } from './icons/c-circle-fill';
 export { default as CCircle } from './icons/c-circle';
 export { default as CcCircleFill } from './icons/cc-circle-fill';
 export { default as CcCircle } from './icons/cc-circle';
