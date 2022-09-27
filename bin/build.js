@@ -13,15 +13,15 @@ if (!fs.existsSync(dir)) {
 }
 
 const initialTypeDefinitions = `/// <reference types="react" />
-import { ComponentType, SVGAttributes } from 'react';
+import { FC, SVGAttributes } from 'react';
 
-interface Props extends SVGAttributes<SVGElement> {
+export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
   title?: string;
 }
 
-type Icon = ComponentType<Props>;
+export type Icon = FC<IconProps>;
 `;
 
 fs.writeFileSync(
