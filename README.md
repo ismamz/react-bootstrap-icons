@@ -54,7 +54,7 @@ export default function App() => {
 
 The icon names are the `PascalCase` version of the original name. For those icons whose name begins with a number, the `Icon` prefix will be used. Examples: `arrow-right` → `ArrowRight`, `1-circle` → `Icon1Circle`.
 
-You can also create an "Icon" component and pass it the icon name as a prop:
+You can also create an `Icon` component and pass it the icon name as a prop:
 
 ```jsx
 import * as icons from 'react-bootstrap-icons';
@@ -65,7 +65,7 @@ interface IconProps extends icons.IconProps {
   iconName: keyof typeof icons;
 }
 
-export const Icon = ({iconName, ...props}: IconProps) => {
+export const Icon = ({ iconName, ...props }: IconProps) => {
   const BootstrapIcon = icons[iconName];
   return <BootstrapIcon {...props} />;
 }
@@ -74,17 +74,22 @@ export const Icon = ({iconName, ...props}: IconProps) => {
 ```jsx
 import { Icon } from './Icon';
 ...
-<Icon iconName="Stopwatch" color="royalblue" size={96} className="align-top" />
+<Icon
+  iconName="Stopwatch"
+  color="royalblue"
+  size={96}
+  className="align-top"
+/>
 ...
 ```
 
 ## IconProps
 
-|Name|Type|Description|
-|---|---|---|
-|color?|string|color of the icon|
-|size?|string \| number |size of the icon|
-|title?|string|acts kind of like img alt="" and/or div title=""|
+| Name   | Type             | Description                                      |
+| ------ | ---------------- | ------------------------------------------------ |
+| color? | string           | color of the icon                                |
+| size?  | string \| number | size of the icon                                 |
+| title? | string           | acts kind of like img alt="" and/or div title="" |
 
 ## Figma Plugin
 
@@ -96,7 +101,7 @@ Other ways to use Boostrap icons: [https://icons.getbootstrap.com/#usage](https:
 
 ## License
 
-- react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
+- react-bootstrap-icons are open-sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
 - Bootstrap Icons are open-sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)).
 
 ## Collaborators
