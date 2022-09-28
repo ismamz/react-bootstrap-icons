@@ -35,7 +35,7 @@ Icons can be configured with inline props:
 <ArrowRight color="royalblue" size={96} />
 ```
 
-You can pass wathever props you want:
+You can pass whatever props you want:
 
 ```jsx
 <ArrowRight className="ml-4" />
@@ -54,9 +54,41 @@ export default function App() => {
 
 The icon names are the `PascalCase` version of the original name. For those icons whose name begins with a number, the `Icon` prefix will be used. Examples: `arrow-right` → `ArrowRight`, `1-circle` → `Icon1Circle`.
 
+You can also create an "Icon" component and pass it the icon name as a prop:
+
+```jsx
+import * as icons from 'react-bootstrap-icons';
+
+interface IconProps extends icons.IconProps {
+  // Cannot use "name" as it is a valid SVG attribute
+  // "iconName", "filename", "icon"... will do it instead
+  iconName: keyof typeof icons;
+}
+
+export const Icon = ({iconName, ...props}: IconProps) => {
+  const BootstrapIcon = icons[iconName];
+  return <BootstrapIcon {...props} />;
+}
+```
+
+```jsx
+import { Icon } from './Icon';
+...
+<Icon iconName="Stopwatch" color="royalblue" size={96} className="align-top" />
+...
+```
+
+## IconProps
+
+|Name|Type|Description|
+|---|---|---|
+|color?|string|color of the icon|
+|size?|string \| number |size of the icon|
+|title?|string|acts kind of like img alt="" and/or div title=""|
+
 ## Figma Plugin
 
-You can install it from Figma app: [Bootstrap Icons Plugin for Figma](https://www.figma.com/community/plugin/868341386266170307/Bootstrap-Icons)
+You can install it from the Figma app: [Bootstrap Icons Plugin for Figma](https://www.figma.com/community/plugin/868341386266170307/Bootstrap-Icons)
 
 ## More options
 
@@ -65,7 +97,7 @@ Other ways to use Boostrap icons: [https://icons.getbootstrap.com/#usage](https:
 ## License
 
 - react-bootstrap-icons are open sourced ([MIT](https://github.com/ismamz/react-bootstrap-icons/blob/master/LICENSE.md))
-- Bootstrap Icons are open sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)).
+- Bootstrap Icons are open-sourced ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)](https://github.com/twbs/icons/blob/main/LICENSE.md)).
 
 ## Collaborators
 
