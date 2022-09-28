@@ -4,7 +4,7 @@ The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use 
 
 > Currently v1.9.1, over **1600 icons!**
 
-<img src="https://api.framer.com/store/assets/ismael/bootstrap-icons/artwork.png?ODhmNDI">
+![bootstrap-icons](https://user-images.githubusercontent.com/39626451/192898250-711e2281-ab03-433a-afeb-4ad542b68a5b.png)
 
 ## Installation
 
