@@ -21,7 +21,6 @@ yarn add react-bootstrap-icons
 ## Usage
 
 ```jsx
-import React from 'react';
 import { ArrowRight } from 'react-bootstrap-icons';
 
 export default function App() {
@@ -44,12 +43,11 @@ You can pass whatever props you want:
 You can also include the whole icon pack:
 
 ```jsx
-import React from 'react';
 import * as Icon from 'react-bootstrap-icons';
 
-export default function App() => {
-  return <Icon.ArrowRight />
-};
+export default function App() {
+  return <Icon.ArrowRight />;
+}
 ```
 
 The icon names are the `PascalCase` version of the original name. For those icons whose name begins with a number, the `Icon` prefix will be used. Examples: `arrow-right` → `ArrowRight`, `1-circle` → `Icon1Circle`.
@@ -61,7 +59,7 @@ import * as icons from 'react-bootstrap-icons';
 
 interface IconProps extends icons.IconProps {
   // Cannot use "name" as it is a valid SVG attribute
-  // "iconName", "filename", "icon"... will do it instead
+  // "iconName", "filename", "icon" will do it instead
   iconName: keyof typeof icons;
 }
 
@@ -73,23 +71,26 @@ export const Icon = ({ iconName, ...props }: IconProps) => {
 
 ```jsx
 import { Icon } from './Icon';
-...
-<Icon
-  iconName="Stopwatch"
-  color="royalblue"
-  size={96}
-  className="align-top"
-/>
-...
+
+export default function App() {
+  return (
+    <Icon
+      iconName="Stopwatch"
+      color="royalblue"
+      size={96}
+      className="align-top"
+    />
+  )
+}
 ```
 
 ## IconProps
 
-| Name   | Type             | Description                                      |
-| ------ | ---------------- | ------------------------------------------------ |
-| color? | string           | color of the icon                                |
-| size?  | string \| number | size of the icon                                 |
-| title? | string           | acts kind of like img alt="" and/or div title="" |
+| Name     | Type             | Description                                      |
+| -------- | ---------------- | ------------------------------------------------ |
+| `color?` | string           | color of the icon                                |
+| `size?`  | string \| number | size of the icon (`width` and `height`)          |
+| `title?` | string           | provides an accessible, short-text description   |
 
 ## Figma Plugin
 
