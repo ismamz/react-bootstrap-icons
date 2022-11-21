@@ -2,7 +2,7 @@
 
 The brand new [Bootstrap Icons library](https://icons.getbootstrap.com/) to use as React components.
 
-> Currently v1.9.1, over **1600 icons!**
+> Currently v1.10.2, over **1900 icons!**
 
 ![bootstrap-icons](https://user-images.githubusercontent.com/39626451/192898250-711e2281-ab03-433a-afeb-4ad542b68a5b.png)
 
@@ -80,17 +80,17 @@ export default function App() {
       size={96}
       className="align-top"
     />
-  )
+  );
 }
 ```
 
 ## IconProps
 
-| Name     | Type             | Description                                      |
-| -------- | ---------------- | ------------------------------------------------ |
-| `color?` | string           | color of the icon                                |
-| `size?`  | string \| number | size of the icon (`width` and `height`)          |
-| `title?` | string           | provides an accessible, short-text description   |
+| Name     | Type             | Description                                    |
+| -------- | ---------------- | ---------------------------------------------- |
+| `color?` | string           | color of the icon                              |
+| `size?`  | string \| number | size of the icon (`width` and `height`)        |
+| `title?` | string           | provides an accessible, short-text description |
 
 ## Figma Plugin
 
