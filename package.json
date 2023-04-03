@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-icons",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "description": "React component for Bootstrap Icons",
   "main": "build/index.js",
   "module": "dist/index.js",
@@ -31,7 +31,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "bootstrap-icons": "^1.10.2",
+    "bootstrap-icons": "^1.10.3",
     "concurrently": "^7.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
