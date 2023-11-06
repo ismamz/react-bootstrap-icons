@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TypeH1 = forwardRef(({
+const Radar = forwardRef(({
   color, size, title, ...rest
 }, ref) => {
   return (
@@ -16,21 +16,21 @@ const TypeH1 = forwardRef(({
     >
       {title ? <title>{title}</title> : null}
 
-      <path d="M7.648 13V3H6.3v4.234H1.348V3H0v10h1.348V8.421H6.3V13h1.348ZM14 13V3h-1.333l-2.381 1.766V6.12L12.6 4.443h.066V13H14Z" />
+      <path d="M6.634 1.135A7 7 0 0 1 15 8a.5.5 0 0 1-1 0 6 6 0 1 0-6.5 5.98v-1.005A5 5 0 1 1 13 8a.5.5 0 0 1-1 0 4 4 0 1 0-4.5 3.969v-1.011A2.999 2.999 0 1 1 11 8a.5.5 0 0 1-1 0 2 2 0 1 0-2.5 1.936v-1.07a1 1 0 1 1 1 0V15.5a.5.5 0 0 1-1 0v-.518a7 7 0 0 1-.866-13.847Z" />
     </svg>
   );
 });
 
-TypeH1.propTypes = {
+Radar.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
 };
 
-TypeH1.defaultProps = {
+Radar.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
 };
 
-export default TypeH1;
+export default Radar;

@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TypeH1 = forwardRef(({
+const Suitcase2 = forwardRef(({
   color, size, title, ...rest
 }, ref) => {
   return (
@@ -16,21 +16,21 @@ const TypeH1 = forwardRef(({
     >
       {title ? <title>{title}</title> : null}
 
-      <path d="M7.648 13V3H6.3v4.234H1.348V3H0v10h1.348V8.421H6.3V13h1.348ZM14 13V3h-1.333l-2.381 1.766V6.12L12.6 4.443h.066V13H14Z" />
+      <path d="M6.5 0a.5.5 0 0 0-.5.5V3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 1.031 1.75A1.003 1.003 0 0 0 5 16a1 1 0 0 0 1-1h4a1 1 0 1 0 1.969-.25A2 2 0 0 0 13 13V5a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-.5-.5h-3ZM9 3H7V1h2v2Zm3 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h8v6ZM5 4h6a1 1 0 0 1 1 1v1H4V5a1 1 0 0 1 1-1Z" />
     </svg>
   );
 });
 
-TypeH1.propTypes = {
+Suitcase2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
 };
 
-TypeH1.defaultProps = {
+Suitcase2.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
 };
 
-export default TypeH1;
+export default Suitcase2;

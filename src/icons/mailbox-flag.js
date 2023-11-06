@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TypeH1 = forwardRef(({
+const MailboxFlag = forwardRef(({
   color, size, title, ...rest
 }, ref) => {
   return (
@@ -16,21 +16,22 @@ const TypeH1 = forwardRef(({
     >
       {title ? <title>{title}</title> : null}
 
-      <path d="M7.648 13V3H6.3v4.234H1.348V3H0v10h1.348V8.421H6.3V13h1.348ZM14 13V3h-1.333l-2.381 1.766V6.12L12.6 4.443h.066V13H14Z" />
+      <path d="M10.5 8.5V3.707l.854-.853A.5.5 0 0 0 11.5 2.5v-2A.5.5 0 0 0 11 0H9.5a.5.5 0 0 0-.5.5v8h1.5ZM5 7c0 .334-.164.264-.415.157C4.42 7.087 4.218 7 4 7c-.218 0-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0Z" />
+      <path d="M4 3h4v1H6.646A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3V3a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4Zm0 1a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3Z" />
     </svg>
   );
 });
 
-TypeH1.propTypes = {
+MailboxFlag.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
 };
 
-TypeH1.defaultProps = {
+MailboxFlag.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
 };
 
-export default TypeH1;
+export default MailboxFlag;

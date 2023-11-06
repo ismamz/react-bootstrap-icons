@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TypeH1 = forwardRef(({
+const PassportFill = forwardRef(({
   color, size, title, ...rest
 }, ref) => {
   return (
@@ -16,21 +16,22 @@ const TypeH1 = forwardRef(({
     >
       {title ? <title>{title}</title> : null}
 
-      <path d="M7.648 13V3H6.3v4.234H1.348V3H0v10h1.348V8.421H6.3V13h1.348ZM14 13V3h-1.333l-2.381 1.766V6.12L12.6 4.443h.066V13H14Z" />
+      <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+      <path d="M2 3.252a1.5 1.5 0 0 1 1.232-1.476l8-1.454A1.5 1.5 0 0 1 13 1.797v.47A2 2 0 0 1 14 4v10a2 2 0 0 1-2 2H4a1.995 1.995 0 0 1-1.51-.688 1.493 1.493 0 0 1-.49-1.11V3.253ZM5 8a3 3 0 1 0 6 0 3 3 0 0 0-6 0Zm0 4.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Z" />
     </svg>
   );
 });
 
-TypeH1.propTypes = {
+PassportFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
 };
 
-TypeH1.defaultProps = {
+PassportFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
 };
 
-export default TypeH1;
+export default PassportFill;
