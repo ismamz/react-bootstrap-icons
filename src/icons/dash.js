@@ -16,7 +16,7 @@ const Dash = forwardRef(({
     >
       {title ? <title>{title}</title> : null}
 
-      <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+      <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
     </svg>
   );
 });
