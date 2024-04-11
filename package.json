@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-icons",
-  "version": "1.11.3",
+  "version": "1.11.4",
   "description": "React component for Bootstrap Icons",
   "main": "build/index.js",
   "module": "dist/index.js",
