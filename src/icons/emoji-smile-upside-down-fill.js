@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EmojiSmileUpsideDownFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const EmojiSmileUpsideDownFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-emoji-smile-upside-down-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ EmojiSmileUpsideDownFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 EmojiSmileUpsideDownFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default EmojiSmileUpsideDownFill;

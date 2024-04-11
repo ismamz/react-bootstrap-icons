@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const SdCard = forwardRef(({
-  color, size, title, ...rest
+  color, size, title, className, ...rest
 }, ref) => {
   return (
     <svg
@@ -12,6 +12,7 @@ const SdCard = forwardRef(({
       width={size}
       height={size}
       fill={color}
+      className={['bi', 'bi-sd-card', className].filter(Boolean).join(' ')}
       {...rest}
     >
       {title ? <title>{title}</title> : null}
@@ -29,12 +30,14 @@ SdCard.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 SdCard.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default SdCard;

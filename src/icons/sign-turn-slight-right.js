@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const SignTurnSlightRight = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const SignTurnSlightRight = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-sign-turn-slight-right', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -31,12 +34,14 @@ SignTurnSlightRight.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 SignTurnSlightRight.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default SignTurnSlightRight;

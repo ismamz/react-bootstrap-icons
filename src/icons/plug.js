@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Plug = forwardRef(({
-  color, size, title, ...rest
+  color, size, title, className, ...rest
 }, ref) => {
   return (
     <svg
@@ -12,6 +12,7 @@ const Plug = forwardRef(({
       width={size}
       height={size}
       fill={color}
+      className={['bi', 'bi-plug', className].filter(Boolean).join(' ')}
       {...rest}
     >
       {title ? <title>{title}</title> : null}
@@ -25,12 +26,14 @@ Plug.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Plug.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default Plug;

@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Paypal = forwardRef(({
-  color, size, title, ...rest
+  color, size, title, className, ...rest
 }, ref) => {
   return (
     <svg
@@ -12,6 +12,7 @@ const Paypal = forwardRef(({
       width={size}
       height={size}
       fill={color}
+      className={['bi', 'bi-paypal', className].filter(Boolean).join(' ')}
       {...rest}
     >
       {title ? <title>{title}</title> : null}
@@ -25,12 +26,14 @@ Paypal.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Paypal.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default Paypal;

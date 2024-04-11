@@ -4,3 +4,4 @@ build
 .DS_Store
 .vscode
 package-lock.json
+_demo

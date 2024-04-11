@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ArrowUpRightSquare = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const ArrowUpRightSquare = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-arrow-up-right-square', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -30,12 +33,14 @@ ArrowUpRightSquare.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 ArrowUpRightSquare.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default ArrowUpRightSquare;

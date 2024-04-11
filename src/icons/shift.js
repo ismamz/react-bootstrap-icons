@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Shift = forwardRef(({
-  color, size, title, ...rest
+  color, size, title, className, ...rest
 }, ref) => {
   return (
     <svg
@@ -12,6 +12,7 @@ const Shift = forwardRef(({
       width={size}
       height={size}
       fill={color}
+      className={['bi', 'bi-shift', className].filter(Boolean).join(' ')}
       {...rest}
     >
       {title ? <title>{title}</title> : null}
@@ -25,12 +26,14 @@ Shift.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Shift.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default Shift;

@@ -19,6 +19,7 @@ export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
   title?: string;
+  className?: string;
 }
 
 export type Icon = FC<IconProps>;
@@ -45,7 +46,7 @@ fs.readdirSync(iconsDir).forEach(file => {
     import React, { forwardRef } from 'react';
     import PropTypes from 'prop-types';
 
-    const ${ComponentName} = forwardRef(({ color, size, title, ...rest }, ref) => {
+    const ${ComponentName} = forwardRef(({ color, size, title, className, ...rest }, ref) => {
       return (
         <svg
           ref={ref}
@@ -54,6 +55,7 @@ fs.readdirSync(iconsDir).forEach(file => {
           width={size}
           height={size}
           fill={color}
+          className={['bi', \`bi-${fileName}\`, className].filter(Boolean).join(' ')}
           {...rest}
         >
           {title ? <title>{title}</title> : null}
@@ -66,12 +68,14 @@ fs.readdirSync(iconsDir).forEach(file => {
       color: PropTypes.string,
       size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       title: PropTypes.string,
+      className: PropTypes.string,
     };
 
     ${ComponentName}.defaultProps = {
       color: 'currentColor',
       size: '1em',
       title: null,
+      className: '',
     };
 
     export default ${ComponentName};

@@ -5,6 +5,7 @@ export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
   title?: string;
+  className?: string;
 }
 
 export type Icon = FC<IconProps>;

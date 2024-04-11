@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FileEarmarkImageFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const FileEarmarkImageFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-file-earmark-image-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -28,12 +31,14 @@ FileEarmarkImageFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 FileEarmarkImageFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default FileEarmarkImageFill;

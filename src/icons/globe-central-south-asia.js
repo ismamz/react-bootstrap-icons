@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const GlobeCentralSouthAsia = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const GlobeCentralSouthAsia = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-globe-central-south-asia', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ GlobeCentralSouthAsia.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 GlobeCentralSouthAsia.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default GlobeCentralSouthAsia;

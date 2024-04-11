@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Dice3 = forwardRef(({
-  color, size, title, ...rest
+  color, size, title, className, ...rest
 }, ref) => {
   return (
     <svg
@@ -12,6 +12,7 @@ const Dice3 = forwardRef(({
       width={size}
       height={size}
       fill={color}
+      className={['bi', 'bi-dice-3', className].filter(Boolean).join(' ')}
       {...rest}
     >
       {title ? <title>{title}</title> : null}
@@ -26,12 +27,14 @@ Dice3.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Dice3.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default Dice3;
