@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const TelephoneForwardFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const TelephoneForwardFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-telephone-forward-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -30,12 +33,14 @@ TelephoneForwardFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 TelephoneForwardFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default TelephoneForwardFill;

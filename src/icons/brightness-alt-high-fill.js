@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const BrightnessAltHighFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const BrightnessAltHighFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-brightness-alt-high-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ BrightnessAltHighFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 BrightnessAltHighFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default BrightnessAltHighFill;

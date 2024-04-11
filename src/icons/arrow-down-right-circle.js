@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ArrowDownRightCircle = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const ArrowDownRightCircle = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-arrow-down-right-circle', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -30,12 +33,14 @@ ArrowDownRightCircle.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 ArrowDownRightCircle.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default ArrowDownRightCircle;

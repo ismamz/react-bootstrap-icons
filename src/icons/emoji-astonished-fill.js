@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EmojiAstonishedFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const EmojiAstonishedFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-emoji-astonished-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ EmojiAstonishedFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 EmojiAstonishedFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default EmojiAstonishedFill;

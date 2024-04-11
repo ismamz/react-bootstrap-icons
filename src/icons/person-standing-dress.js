@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PersonStandingDress = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const PersonStandingDress = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-person-standing-dress', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ PersonStandingDress.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 PersonStandingDress.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default PersonStandingDress;

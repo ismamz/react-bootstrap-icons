@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Calendar2CheckFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const Calendar2CheckFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-calendar2-check-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ Calendar2CheckFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Calendar2CheckFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default Calendar2CheckFill;

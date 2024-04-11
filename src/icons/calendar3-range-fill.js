@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Calendar3RangeFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const Calendar3RangeFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-calendar3-range-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -30,12 +33,14 @@ Calendar3RangeFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Calendar3RangeFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default Calendar3RangeFill;

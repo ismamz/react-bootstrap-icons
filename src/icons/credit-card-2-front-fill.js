@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const CreditCard2FrontFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const CreditCard2FrontFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-credit-card-2-front-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -27,12 +30,14 @@ CreditCard2FrontFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 CreditCard2FrontFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default CreditCard2FrontFill;

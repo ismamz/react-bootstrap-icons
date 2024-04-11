@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const BuildingFillExclamation = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const BuildingFillExclamation = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-building-fill-exclamation', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -28,12 +31,14 @@ BuildingFillExclamation.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 BuildingFillExclamation.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default BuildingFillExclamation;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const SignIntersectionSide = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const SignIntersectionSide = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-sign-intersection-side', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -28,12 +31,14 @@ SignIntersectionSide.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 SignIntersectionSide.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default SignIntersectionSide;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const DatabaseFillExclamation = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const DatabaseFillExclamation = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-database-fill-exclamation', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -29,12 +32,14 @@ DatabaseFillExclamation.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 DatabaseFillExclamation.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default DatabaseFillExclamation;

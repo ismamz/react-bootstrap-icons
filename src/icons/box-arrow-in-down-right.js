@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const BoxArrowInDownRight = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const BoxArrowInDownRight = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-box-arrow-in-down-right', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -34,12 +37,14 @@ BoxArrowInDownRight.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 BoxArrowInDownRight.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default BoxArrowInDownRight;

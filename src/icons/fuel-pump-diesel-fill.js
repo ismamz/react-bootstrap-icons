@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FuelPumpDieselFill = forwardRef(
   ({
-    color, size, title, ...rest
+    color, size, title, className, ...rest
   }, ref) => {
     return (
       <svg
@@ -13,6 +13,9 @@ const FuelPumpDieselFill = forwardRef(
         width={size}
         height={size}
         fill={color}
+        className={['bi', 'bi-fuel-pump-diesel-fill', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
@@ -28,12 +31,14 @@ FuelPumpDieselFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 FuelPumpDieselFill.defaultProps = {
   color: 'currentColor',
   size: '1em',
   title: null,
+  className: '',
 };
 
 export default FuelPumpDieselFill;
