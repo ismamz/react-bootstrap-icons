@@ -86,11 +86,12 @@ export default function App() {
 
 ## IconProps
 
-| Name     | Type             | Description                                    |
-| -------- | ---------------- | ---------------------------------------------- |
-| `color?` | string           | color of the icon                              |
-| `size?`  | string \| number | size of the icon (`width` and `height`)        |
-| `title?` | string           | provides an accessible, short-text description |
+| Name         | Type             | Description                                    |
+| ------------ | ---------------- | ---------------------------------------------- |
+| `color?`     | string           | color of the icon                              |
+| `size?`      | string \| number | size of the icon (`width` and `height`)        |
+| `title?`     | string           | provides an accessible, short-text description |
+| `className?` | string           | `bi bi-{icon-name}` and add your own classes   |
 
 ## Figma Plugin
 
