@@ -2,9 +2,16 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Box2Heart = forwardRef(
-  ({
-    color, size, title, className, ...rest
-  }, ref) => {
+  (
+    {
+      color = 'currentColor',
+      size = '1em',
+      title = null,
+      className = '',
+      ...rest
+    },
+    ref,
+  ) => {
     return (
       <svg
         ref={ref}
@@ -30,13 +37,6 @@ Box2Heart.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
-};
-
-Box2Heart.defaultProps = {
-  color: 'currentColor',
-  size: '1em',
-  title: null,
-  className: '',
 };
 
 export default Box2Heart;

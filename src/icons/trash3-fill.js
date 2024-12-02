@@ -2,9 +2,16 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Trash3Fill = forwardRef(
-  ({
-    color, size, title, className, ...rest
-  }, ref) => {
+  (
+    {
+      color = 'currentColor',
+      size = '1em',
+      title = null,
+      className = '',
+      ...rest
+    },
+    ref,
+  ) => {
     return (
       <svg
         ref={ref}
@@ -31,13 +38,6 @@ Trash3Fill.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
-};
-
-Trash3Fill.defaultProps = {
-  color: 'currentColor',
-  size: '1em',
-  title: null,
-  className: '',
 };
 
 export default Trash3Fill;

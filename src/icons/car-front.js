@@ -2,9 +2,16 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const CarFront = forwardRef(
-  ({
-    color, size, title, className, ...rest
-  }, ref) => {
+  (
+    {
+      color = 'currentColor',
+      size = '1em',
+      title = null,
+      className = '',
+      ...rest
+    },
+    ref,
+  ) => {
     return (
       <svg
         ref={ref}
@@ -30,13 +37,6 @@ CarFront.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
-};
-
-CarFront.defaultProps = {
-  color: 'currentColor',
-  size: '1em',
-  title: null,
-  className: '',
 };
 
 export default CarFront;

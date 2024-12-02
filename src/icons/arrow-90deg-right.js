@@ -2,9 +2,16 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const Arrow90degRight = forwardRef(
-  ({
-    color, size, title, className, ...rest
-  }, ref) => {
+  (
+    {
+      color = 'currentColor',
+      size = '1em',
+      title = null,
+      className = '',
+      ...rest
+    },
+    ref,
+  ) => {
     return (
       <svg
         ref={ref}
@@ -34,13 +41,6 @@ Arrow90degRight.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
-};
-
-Arrow90degRight.defaultProps = {
-  color: 'currentColor',
-  size: '1em',
-  title: null,
-  className: '',
 };
 
 export default Arrow90degRight;

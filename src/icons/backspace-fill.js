@@ -2,9 +2,16 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 const BackspaceFill = forwardRef(
-  ({
-    color, size, title, className, ...rest
-  }, ref) => {
+  (
+    {
+      color = 'currentColor',
+      size = '1em',
+      title = null,
+      className = '',
+      ...rest
+    },
+    ref,
+  ) => {
     return (
       <svg
         ref={ref}
@@ -31,13 +38,6 @@ BackspaceFill.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
-};
-
-BackspaceFill.defaultProps = {
-  color: 'currentColor',
-  size: '1em',
-  title: null,
-  className: '',
 };
 
 export default BackspaceFill;
