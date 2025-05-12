@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Calendar3RangeFill = forwardRef(
+const FlaskFlorenceFill = forwardRef(
   (
     {
       color = 'currentColor',
@@ -20,24 +20,24 @@ const Calendar3RangeFill = forwardRef(
         width={size}
         height={size}
         fill={color}
-        className={['bi', 'bi-calendar3-range-fill', className]
+        className={['bi', 'bi-flask-florence-fill', className]
           .filter(Boolean)
           .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
 
-        <path d="M16 5h-6a1 1 0 0 0 0 2h6v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-4h6a1 1 0 0 0 0-2H0V3h16zm-2-5a2 2 0 0 1 2 2H0a2 2 0 0 1 2-2z" />
+        <path d="m10.5 0 .1.01a.5.5 0 0 1-.1.99H10v5.417c.517.226.986.538 1.394.916l.043.038.14.14a6 6 0 0 1 .303.34l.101.128q.045.06.088.122a5 5 0 0 1 .26.4l.066.12a5 5 0 0 1 .16.32q.029.062.053.124.035.08.067.163.115.3.19.62l.024.111a5 5 0 0 1 .096.68Q13 10.82 13 11l-.007.257A5 5 0 0 1 8 16l-.257-.007A5 5 0 0 1 6 6.417V1h-.5a.5.5 0 0 1 0-1zM8 6a.5.5 0 0 0 0 1h1.065A.5.5 0 0 1 9 6.756V6zm0-2a.5.5 0 0 0 0 1h1V4zm0-2a.5.5 0 0 0 0 1h1V2z" />
       </svg>
     );
   },
 );
 
-Calendar3RangeFill.propTypes = {
+FlaskFlorenceFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
 };
 
-export default Calendar3RangeFill;
+export default FlaskFlorenceFill;
