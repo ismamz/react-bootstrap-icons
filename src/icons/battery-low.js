@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Lock = forwardRef(
+const BatteryLow = forwardRef(
   (
     {
       color = 'currentColor',
@@ -20,25 +20,25 @@ const Lock = forwardRef(
         width={size}
         height={size}
         fill={color}
-        className={['bi', 'bi-lock', className].filter(Boolean).join(' ')}
+        className={['bi', 'bi-battery-low', className]
+          .filter(Boolean)
+          .join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
 
-        <path
-          fillRule="evenodd"
-          d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
-        />
+        <path d="M2 6h2v4H2z" />
+        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8" />
       </svg>
     );
   },
 );
 
-Lock.propTypes = {
+BatteryLow.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
 };
 
-export default Lock;
+export default BatteryLow;

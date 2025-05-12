@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Lock = forwardRef(
+const Bluesky = forwardRef(
   (
     {
       color = 'currentColor',
@@ -20,25 +20,22 @@ const Lock = forwardRef(
         width={size}
         height={size}
         fill={color}
-        className={['bi', 'bi-lock', className].filter(Boolean).join(' ')}
+        className={['bi', 'bi-bluesky', className].filter(Boolean).join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
 
-        <path
-          fillRule="evenodd"
-          d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
-        />
+        <path d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
       </svg>
     );
   },
 );
 
-Lock.propTypes = {
+Bluesky.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
 };
 
-export default Lock;
+export default Bluesky;

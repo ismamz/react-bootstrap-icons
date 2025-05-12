@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Lock = forwardRef(
+const Beaker = forwardRef(
   (
     {
       color = 'currentColor',
@@ -20,25 +20,23 @@ const Lock = forwardRef(
         width={size}
         height={size}
         fill={color}
-        className={['bi', 'bi-lock', className].filter(Boolean).join(' ')}
+        className={['bi', 'bi-beaker', className].filter(Boolean).join(' ')}
         {...rest}
       >
         {title ? <title>{title}</title> : null}
 
-        <path
-          fillRule="evenodd"
-          d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"
-        />
+        <path d="M9.5 3a.5.5 0 0 0 0 1H13V3zm2 2a.5.5 0 0 0 0 1H13V5zm-2 2a.5.5 0 0 0 0 1H13V7zm2 2a.5.5 0 0 0 0 1H13V9zm-2 2a.5.5 0 0 0 0 1H13v-1zm2 2a.5.5 0 0 0 0 1H13v-1z" />
+        <path d="M.5 0a.5.5 0 0 0-.354.854l.122.12A2.5 2.5 0 0 1 1 2.744V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2.743a2.5 2.5 0 0 1 .732-1.768l.122-.121A.5.5 0 0 0 15.5 0zM2 2.743A3.5 3.5 0 0 0 1.535 1h12.93A3.5 3.5 0 0 0 14 2.743V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
       </svg>
     );
   },
 );
 
-Lock.propTypes = {
+Beaker.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   className: PropTypes.string,
 };
 
-export default Lock;
+export default Beaker;
